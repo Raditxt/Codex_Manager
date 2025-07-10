@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+env/
+
+# VSCode
+.vscode/
+
+# Data pribadi (catatan AI kamu)
+data/entries.json
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# IDE-specific
+.idea/
+
+# Tambahan di .gitignore
+data/entries.json
+
