@@ -10,6 +10,8 @@ def print_menu():
     print("0. Keluar")
 
 def input_entry():
+    print("\n" + "="*50)
+    print(f"📝 [BOLD]{entry.title}[/BOLD]".replace('[BOLD]', '\033[1m').replace('[/BOLD]', '\033[0m'))
     title = input("Judul: ")
     category = input("Kategori: ")
     tags = input("Tags (pisahkan dengan koma): ").split(",")

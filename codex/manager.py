@@ -31,6 +31,7 @@ class CodexManager:
 
     def load(self):
         if not os.path.exists(self.filepath):
+            os.makedirs(os.path.dirname(self.filepath), exist_ok=True)
             self.entries = []
             return
         with open(self.filepath, "r", encoding="utf-8") as f:

@@ -1,7 +1,9 @@
+import uuid
 from datetime import datetime
 
 class Entry:
     def __init__(self, title, category, tags, summary, code_snippet, source, date_created=None):
+        self.id = str(uuid.uuid4())
         self.title = title
         self.category = category
         self.tags = tags
@@ -12,6 +14,7 @@ class Entry:
 
     def to_dict(self):
         return {
+            "id": self.id,
             "title": self.title,
             "category": self.category,
             "tags": self.tags,

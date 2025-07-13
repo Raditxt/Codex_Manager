@@ -27,8 +27,10 @@ def main():
                 display_entry(e)
         elif choice == "5":
             title = input("Judul entry yang ingin dihapus: ")
-            manager.delete_entry(title)
-            print("🗑️ Entry dihapus jika ada yang cocok.")
+            confirm =  input(f"Yakin hapus '{title}'? (y/n) : ")
+            if confirm.lower() == 'y':
+                manager.delete_entry(title)
+                print("🗑️ Entry dihapus.")
         elif choice == "0":
             print("Sampai jumpa, Aether.")
             break
