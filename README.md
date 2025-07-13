@@ -1,57 +1,89 @@
 # AI Codex Manager
 
-AI Codex Manager adalah aplikasi sederhana untuk mengelola catatan, snippet kode, dan referensi terkait AI atau pemrograman. Cocok untuk menyimpan ide, solusi, dan pengetahuan yang ingin kamu dokumentasikan.
+**AI Codex Manager** adalah aplikasi Python untuk menyimpan, mencari, dan mengelola catatan, snippet kode, serta referensi seputar AI dan pemrograman. Cocok untuk developer dan pemula yang ingin membangun dokumentasi pribadi atau belajar mengorganisir pengetahuan teknis.
 
-## ✨ Fitur
+---
 
-- Tambah entry baru (judul, kategori, tag, ringkasan, kode, sumber)
-- Lihat semua entry
-- Cari entry berdasarkan tag atau judul
-- Hapus entry
-- Data disimpan dalam format JSON
+## 📖 Apa Itu Codex?
 
-## 📦 Struktur Proyek
+Codex adalah kumpulan entry yang berisi:
+- **Judul**: Nama atau topik utama
+- **Kategori**: Jenis atau kelompok (misal: Python, Machine Learning)
+- **Tag**: Label pencarian (misal: array, decorator)
+- **Ringkasan**: Penjelasan singkat
+- **Kode**: Snippet atau contoh kode
+- **Sumber**: Link atau referensi
+
+---
+
+## 🚀 Fitur Utama
+
+- **Tambah Entry**: Simpan ide, solusi, atau snippet baru
+- **Cari Entry**: Temukan catatan berdasarkan judul atau tag
+- **Lihat Semua**: Tampilkan seluruh codex yang tersimpan
+- **Hapus Entry**: Bersihkan catatan yang tidak diperlukan
+- **Ekspor Data**: Konversi codex ke format lain (fitur lanjutan)
+- **CLI Interaktif**: Mudah digunakan langsung dari terminal
+
+---
+
+## 🗂️ Struktur Proyek
 
 ```
-.
-├── main.py
+ai_codex_manager/
+├── main.py                # Entry point aplikasi
 ├── codex/
-│   ├── entry.py
-│   ├── manager.py
-│   ├── category.py
-│   ├── tag.py
-│   └── exporter.py
+│   ├── entry.py           # Struktur data codex
+│   ├── manager.py         # Logika CRUD codex
+│   ├── category.py        # Manajemen kategori
+│   ├── tag.py             # Manajemen tag
+│   └── exporter.py        # Ekspor data codex
 ├── interface/
-│   └── cli.py
+│   └── cli.py             # Command-line interface
 ├── utils/
-│   └── helpers.py
+│   └── helpers.py         # Fungsi pendukung
 ├── data/
-│   └── entries.json
+│   └── entries.json       # hide Database codex (JSON)
 ├── requirements.txt
 ├── README.md
 ├── LICENCE
 └── .gitignore
 ```
 
-## 🚀 Cara Menjalankan
+---
 
-1. **Clone repo ini**
+## 🏁 Cara Memulai
+
+1. **Clone repository ini**
 2. (Opsional) Buat virtual environment dan install dependensi:
     ```sh
     python -m venv venv
-    source venv/bin/activate  # atau venv\Scripts\activate di Windows
+    venv\Scripts\activate  # di Windows
     pip install -r requirements.txt
     ```
 3. **Jalankan aplikasi:**
     ```sh
     python main.py
     ```
+4. Ikuti instruksi di terminal untuk menambah, mencari, atau mengelola codex.
+
+---
+
+## 💡 Tips Penggunaan
+
+- Gunakan tag dan kategori agar pencarian lebih mudah.
+- Simpan snippet kode yang sering digunakan.
+- Tambahkan sumber agar mudah menemukan referensi asli.
+
+---
 
 ## 🛠️ Dependensi
 
 - Python 3.7+
-- (Tidak ada dependensi eksternal, semua menggunakan modul standar Python)
+- Modul standar Python (json, os, argparse, dll)
+
+---
 
 ## 📜 Lisensi
 
-Proyek ini dilisensikan di bawah MIT License - lihat file [LICENCE](LICENCE) untuk detailnya.
+Proyek ini menggunakan MIT License. Silakan cek [LICENCE](LICENCE) untuk detailnya.
